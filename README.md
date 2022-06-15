@@ -6,19 +6,27 @@
 
 This can also be used for general usage. 
 It does use the vector library, and I believe there is a Matrix() function in C++ rendering this obsolete,
-However, it is a personal/school endeavour, so i shall do it anyway.
+However, it is a personal/school endeavour, so I shall do it anyway.
 
 The docs will take some time to complete, but here is what works so far.
  
 
 ## Basic usage:
 
-#### Include
+### Include
 Just include the header files:
 ```cpp
 #include "matrix.h" // for Matrices
 #include "vector_utils.h" // for the vector utilities
+#include "lines.h" // for lines
+#include "planes.h" // for planes
 ```
+
+
+
+### Matrices:
+
+
 
 #### Matrix type
 Every matrix Has these properties:
@@ -26,7 +34,7 @@ Every matrix Has these properties:
 - rows ``int``
 - cols ``int``
 
-To get the rows and collumns, we must use their getters; rows() and cols().
+To get the rows and columns, we must use their getters; rows() and cols().
 
 Example:
 ```cpp

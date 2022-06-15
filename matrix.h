@@ -40,7 +40,10 @@ namespace mtx {
     Matrix scalarMult(Matrix u, float k);
 
     // determinant
-    float determinant();
+    float determinant(Matrix u);
+
+    // trace
+    float trace(Matrix u);
 
     // is triangular?
     bool isTriangular(Matrix u);
@@ -51,7 +54,7 @@ namespace mtx {
     // is elementary?
     bool isElementary(Matrix u);
 
-    // returns the 0 vector given a size
+    // returns the 0 Vector given a size
     Matrix zeroMatrix(int rows, int cols);
 
     // returns the identity matrix of a given size
