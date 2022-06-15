@@ -11,9 +11,7 @@ However, it is a personal/school endeavour, so I shall do it anyway.
 The docs will take some time to complete, but here is what works so far.
  
 
-## Basic usage:
-
-### Include
+## Include
 Just include the header files:
 ```cpp
 #include "matrix.h" // for Matrices
@@ -24,7 +22,7 @@ Just include the header files:
 
 
 
-### Matrices:
+## Matrices:
 
 
 
@@ -35,10 +33,11 @@ Every matrix Has these properties:
 - cols ``int``
 
 To get the rows and columns, we must use their getters; rows() and cols().
+The class can be initialized with a std::vector<std::vector<float>>.
 
 Example:
 ```cpp
-mtx::Matrix m = mtx::Matrix({
+mtx::Matrix m = mtx::Matrix({ // init with type std::vector<std::vector<float>>
     {1,0,0},
     {0,1,0},
     {0,0,1}
