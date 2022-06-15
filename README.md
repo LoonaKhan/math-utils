@@ -80,8 +80,8 @@ mtx::Matrix m = mtx::Matrix({
 mtx::print(m);
 /*
  * [
- *  [1,1,1],
- *  [1,1,1]
+ *  [1, 1, 1],
+ *  [1, 1, 1]
  * ] 
  */
 ```
@@ -103,4 +103,10 @@ Example:
 // generates a 2x3 matrix. 
 // 2 rows, 3 columns 
 mtx::Matrix zeroMatrix = mtx::zeroMatrix(2,3); 
+/*
+ * [
+ *  [0, 0, 0],
+ *  [0, 0, 0]
+ * ]
+ */
 ```
