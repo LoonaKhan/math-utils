@@ -2,6 +2,8 @@
  * Testing module for the matrix library.
  *
  * Created by loona on 14/06/22.
+ *
+ * TODO: make the tests here more comprehensive. use matrix properties in the textbook
 */
 
 #include "../matrix.h"
