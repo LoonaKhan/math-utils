@@ -28,7 +28,7 @@ namespace vtr {
     Vector crossProd(Vector u, Vector v);
 
     // norm/magnitude of a Vector
-    float norm(Vector u);
+    double norm(Vector u);
 
     // angle between 2 vectors in degrees
     float angle(Vector u, Vector v);
@@ -54,6 +54,7 @@ namespace vtr {
     // generates a 0 vector based on the dimensions given
     Vector zeroVector(int dim);
 
+    void printVector(Vector u);
 
 }
 

@@ -2,6 +2,8 @@
  * Module implementing matrix.h
  *
  * Created by loona on 14/06/22.
+ *
+ * TODO: check that this uses push_back()
 */
 
 #include "matrix.h"
