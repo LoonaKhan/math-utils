@@ -52,6 +52,46 @@ double vtr::norm(const Vector u){
     return sqrt(norm); // returns the square root
 }
 
+float vtr::angle(std::vector<float> u, std::vector<float> v) {
+    /*
+     * finds the slope of each line
+     * then we can use trigonometry to solve for the angle.
+     *
+     * where 1 line is the hypotenuse, the other is adjacent.
+     * we can use: cos(theta) = a/h to solve for the angle
+     *
+     * rearranging for the angle, we get: theta = cos^-1(a/h)
+     *
+     * cos^-1 has a domain of [-1, 1], so the hypotenuse will always have a larger slope.
+     *
+     * todo: this is in radians atm. convert it to degrees.
+     * */
+
+    // all vectors originate from the origin, so we only need to compute the given points
+    float slopeU = u[1] / u[0];
+    float slopeV = v[1] / v[0];
+    printf("slopeU: %.6f \nslopeV: %.6f\n", slopeU, slopeV);
+
+    // special cases where the angle is 0, 90
+    if (slopeV == slopeU){
+        // if the slopes are the same they are parallel.
+        // we dont need to continue the rest of the function
+        return 0;
+    }
+    if (slopeU == -1/slopeV or slopeV == -1/slopeU) // if one is the negative reciprocal, they are at right angles. if we continued, we would get an exception
+        return 90;
+
+
+    float ratio = slopeU/ slopeV;
+    if (abs(ratio) >1) // ratio must be between [-1,1]
+        ratio = 1/ratio;
+
+
+    return acos(ratio);// * (3.14/180);
+
+
+}
+
 bool vtr::isUnitVector(Vector u){
     /*
      * A vector is a unit vector if it's norm ==1

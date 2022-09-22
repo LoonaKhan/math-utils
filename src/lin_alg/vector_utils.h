@@ -12,6 +12,7 @@
 #define Vector std::vector<float> // to make it a smidge faster since its re-used everywhere
 
 #include <vector>
+#include "math.h"
 
 namespace vtr {
 

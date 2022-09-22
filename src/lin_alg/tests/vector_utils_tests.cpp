@@ -246,6 +246,24 @@ void scalarMultTest(){
     vtr::printVector(vtr::scalarMult(u, k));
 }
 
+void angleTest(){
+    /* scenarios:
+     * the same vector. should be 0
+     * the scalar equivalent vector. should be 0
+     * a vector and its negative reciprocal. should be 90
+     * angles are parralel and in opposite directions. should be 180
+    */
+    Vector u = {1,2};
+    Vector uScaled = {2,4};
+    Vector uReciprocal = {1, -0.5};
+    Vector uOpposite = {-1,-2};
+    Vector v = {6,7};
+
+    auto angle = vtr::angle(u,v);
+
+    std::cout << "angle: " << angle << std::endl;
+}
+
 int main(){ // uncomment one of the lines below to run tests
     //vectorSize();
 
@@ -262,4 +280,6 @@ int main(){ // uncomment one of the lines below to run tests
     //addTest();
 
     //scalarMultTest();
+
+    angleTest();
 }
