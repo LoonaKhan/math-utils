@@ -46,6 +46,9 @@ namespace vtr {
     // orthagonal projection of one vector onto another
     Vector orthagProj(Vector u, Vector v);
 
+    // find slope of a vector between 2 coordinates
+    float slope(Vector p1, Vector p2);
+
     // checks if the vector is a unit vector
     bool isUnitVector(Vector u);
 

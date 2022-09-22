@@ -264,6 +264,17 @@ void angleTest(){
     std::cout << "angle: " << angle << std::endl;
 }
 
+void slopeTest(){
+    /*
+     * scenarios:
+     *  slope is 1          {2,2},{4,4}
+     *  slope is 0          {1,2}, {2,2}
+     *  slope is undefned   {2,2}, {2,2}
+     *  slope is negative   {1,2}, {2,1}
+     * */
+    std::cout << vtr::slope({1,2}, {2,1}) <<std::endl;
+}
+
 int main(){ // uncomment one of the lines below to run tests
     //vectorSize();
 
@@ -281,5 +292,7 @@ int main(){ // uncomment one of the lines below to run tests
 
     //scalarMultTest();
 
-    angleTest();
+    //angleTest();
+
+    //slopeTest();
 }

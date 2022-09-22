@@ -70,7 +70,6 @@ float vtr::angle(std::vector<float> u, std::vector<float> v) {
     // all vectors originate from the origin, so we only need to compute the given points
     float slopeU = u[1] / u[0];
     float slopeV = v[1] / v[0];
-    printf("slopeU: %.6f \nslopeV: %.6f\n", slopeU, slopeV);
 
     // special cases where the angle is 0, 90
     if (slopeV == slopeU){
@@ -90,6 +89,10 @@ float vtr::angle(std::vector<float> u, std::vector<float> v) {
     return acos(ratio);// * (3.14/180);
 
 
+}
+
+float vtr::slope(std::vector<float> p1, std::vector<float> p2) {
+    return ((p2[1] - p1[1])/(p2[0] - p1[0]));
 }
 
 bool vtr::isUnitVector(Vector u){
