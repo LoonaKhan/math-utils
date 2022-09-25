@@ -292,7 +292,7 @@ int main(){ // uncomment one of the lines below to run tests
 
     //scalarMultTest();
 
-    //angleTest();
+    angleTest();
 
     //slopeTest();
 }

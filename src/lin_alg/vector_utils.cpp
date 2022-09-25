@@ -33,6 +33,12 @@ float vtr::dotProd(Vector u, Vector v){
     return dotProd;
 }
 
+std::vector<float> vtr::crossProd(std::vector<float> u, std::vector<float> v) {
+    // need a mathematical way to represent the right hand rule
+    // vtr::norm(u) * vtr::norm(v) * degrees(sin(vtr::angle(u,v)))
+    // multiply that by the unit vector.
+}
+
 double vtr::norm(const Vector u){
     /*
      * Calculates the norm of a vector.
@@ -67,26 +73,7 @@ float vtr::angle(std::vector<float> u, std::vector<float> v) {
      * todo: this is in radians atm. convert it to degrees.
      * */
 
-    // all vectors originate from the origin, so we only need to compute the given points
-    float slopeU = u[1] / u[0];
-    float slopeV = v[1] / v[0];
-
-    // special cases where the angle is 0, 90
-    if (slopeV == slopeU){
-        // if the slopes are the same they are parallel.
-        // we dont need to continue the rest of the function
-        return 0;
-    }
-    if (slopeU == -1/slopeV or slopeV == -1/slopeU) // if one is the negative reciprocal, they are at right angles. if we continued, we would get an exception
-        return 90;
-
-
-    float ratio = slopeU/ slopeV;
-    if (abs(ratio) >1) // ratio must be between [-1,1]
-        ratio = 1/ratio;
-
-
-    return acos(ratio);// * (3.14/180);
+    return acos((vtr::dotProd(u,v))/(vtr::norm(u)*vtr::norm(v)));
 
 
 }

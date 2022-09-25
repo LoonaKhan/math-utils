@@ -14,6 +14,12 @@
 #include <vector>
 #include "math.h"
 
+/* todo
+ * find unit vector
+ * isParallel
+ * then crossprod
+ * */
+
 namespace vtr {
 
     // addition of 2 vectors
