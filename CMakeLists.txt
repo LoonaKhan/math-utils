@@ -7,3 +7,4 @@ add_executable(Matrix_Test src/lin_alg/tests/matrix_tests.cpp src/lin_alg/matrix
 add_executable(Vector_Test src/lin_alg/tests/vector_utils_tests.cpp src/lin_alg/vector_utils.h src/lin_alg/vector_utils.cpp)
 add_executable(Lines_Test src/lin_alg/tests/lines_tests.cpp src/lin_alg/lines.cpp src/lin_alg/lines.h)
 add_executable(Planes_Test src/lin_alg/tests/planes_tests.cpp src/lin_alg/planes.h src/lin_alg/planes.cpp)
+add_executable(Angles_Test src/angles_test.cpp src/angles.cpp src/angles.h)
